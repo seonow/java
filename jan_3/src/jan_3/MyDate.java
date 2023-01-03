@@ -1,9 +1,15 @@
 package jan_3;
 
+
+
 	public class MyDate {
 		private int day;
 		private int month;
 		private int year;
+		
+		int a = 10;
+		public int b = 20;
+		private int c;
 		
 		// 디폴트 생성자의 모습
 		public MyDate() {
@@ -24,7 +30,7 @@ package jan_3;
 			return year;
 		}
 		public void setDay(int d) {
-			day = d;
+			this.day = d;
 		}
 		public void setMonth(int m) {
 			month = m;

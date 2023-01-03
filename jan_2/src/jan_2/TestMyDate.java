@@ -6,9 +6,13 @@
 				m.setDay(2);
 				m.setMonth(1);
 				m.setYear(2023);
+
+				int goal;
+				int win = goal + 10;
 				
 				String dayInfo = m.getDetails();
 				System.out.println(dayInfo);
+				System.out.println(win);
 			}
 		}
 

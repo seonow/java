@@ -1,0 +1,57 @@
+public static void main(String[] args) {
+		MyDate date;
+			- //MyDate라는 클래스에 date라는 객체 생성
+		
+		int val;
+		val = 11;
+			- //val이라는 정수형 변수 선언 후 11이라는 값으로 초기화
+
+		changeInt(val);
+			- //changeInt라는 메서드에 변수val을 대입
+			- //value와 val은 다르므로 val은 여전히 11이고 value는 여전히 55이다
+			- //value = 55는 없어지고 val = 11로 덮어씌워졌나? 아니면 두개의 값이 여전히 존재하는가?
+			- //이것이 pass by value 인가?
+			- //11과 55의 값이 모두 changeInt를 가르키고 있고 있지만 val과 value는 각기 다른 위치에서 changeInt를 가르키고 있다
+			
+
+
+		
+		System.out.println("Int value is: " + val); // Int value is: 11
+			- //val값에 변화가 없으므로 val값을 찍으면 11이 나온다				
+
+
+	
+		date = new MyDate(22, 7, 1964);
+			- //date라는 객체는 
+			- 생성자    public MyDate(int day, int month, int year) {
+			-  	  this.day = day;
+			-  	  this.month = month;
+			-  	  this.year = year;
+			- }을 이용하여 값을 받는다.
+			- date는 22,7,1964값을 가진다		
+
+	
+		changeObjectRef(date);
+			- //changeObjectRef라는 메서드에 date를 대입한다
+			- date는 여전히 (22, 7, 1964)값을 가진다
+
+			- 그런데 이때 changeObjectRef는 MyDate ref값과 date라는 값 두개를 가지는 것인가?
+			- 아니면 date값이 MyDate ref값을 덮어서 MyDate ref값이 없어지나?
+			- 아니면 date값이 들어갔지만 추후 ref = new MyDate(1, 1, 2000)에 의해 date값이 없어지나?
+			
+			- 또한 상기코드인 	public static void changeObjectRef(MyDate ref) {
+					ref = new MyDate(1, 1, 2000);
+					}
+			- 에서 changeObjectRef(MyDate ref)가 있는데 여기 중 MyDate ref는 무엇인가? 이렇게 작성하는 것이 어떤 의미 혹은 문법을 가지고 있나?
+			- ref는 MyDate라는 생성자를 호출해서 생성된 객체
+
+
+		System.out.println("MyDate: " + date.getDetails()); // MyDate: 1964-7-22
+			-  date의 값을 찍으라고 했으니까 1964.7.22가 나온다
+	
+		changeObjectAttr(date);
+		System.out.println("MyDate: " + date.getDetails()); // MyDate: 1964-7-4
+			- date의 값을 찍으라고 했으니 1964-7이 나오는데 ref의 Day값을 4로 변경했는데 왜 date값의 Day값이 4로 변하는가?
+			- ref와 date는 별개가 아닌가? 
+	}
+

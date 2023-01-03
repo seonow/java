@@ -34,9 +34,9 @@ public class TestGreeting {
 //------------------------------------
 //Basic syntax of a Java class:
 //<modifier>* class <class_name>{
-//<attribute_declaration>*
-//<constructor_declaration>*
-//<method_declaration>*
+//<attribute_declaration>* 속성(타입)선언
+//<constructor_declaration>* 생성자선언
+//<method_declaration>* 메서드선언
 //}
 
 //Example:
