@@ -1,0 +1,91 @@
+16진수
+0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+\03A6 = 파이
+
+
+-----------------------------------------------------------------
+기본형 타입은 값이 바로 들어간다
+boolean(true,false), char('a' etc...), byte, short, int, long, float, double
+
+char은 ''
+string은 ""
+
+byte, short, int, long - 정수
+long: L, l을 붙여서 쓰면 long타입임을 나타낸다
+
+it는 0을 양수로 취급
+
+double, float - 실수
+
+long l = 10; int를 long에 담아서 문제가 안된다
+int i = l; 기본적으로 에러가 떨어진다
+int i = (int)l; 캐스팅 l이 (int)로 전환되고 i에 담긴다
+담기긴 하지만 숫자가 부정확할 수 있다.
+EX)int의 최대는 21억인데 100억을 담는다고 하면 숫자가 정확하지 않을 수 있다.
+
+
+----------------------------------------------------------------
+참조형 타입은 기본형 타입이 아닌 나머지
+참조형 타입은 mydate = new mydate 이런식으로 들어가는데
+String만 유일한게 String greeting = "good morning"처럼 바로 들어갈 수 있다.
+
+참조형 타입은 참조를 갖는다. 값을 가지는 것이 아니다
+
+MyDate s = new MyDate(22, 7, 1964);
+MyDate t = s;
+주소를 지정한다
+한개의 객체에 두개의 참조
+
+MyDate s = new MyDate(22, 7, 1964);
+MyDate t = new MyDate(22, 12, 1964)
+두개의 객체에 두개의 참조
+
+Pass-by-Value()
+값을 복사해서 전달한다
+
+
+
+------------------------------------------
+public class PassByValueTest {
+	public static void changeInt(int value) {
+		value = 55;
+	}
+이때 changeInt는 무엇인가? 메서드이다
+value는 객체?
+changeInt를 만들어내고
+void는 리턴해줄게 없다.
+value는 55다.
+*생성자는 클래스이름과 동일하다*
+	public static void changeObjectRef(MyDate ref) {
+		ref = new MyDate(1, 1, 2000);
+	}
+
+changeObjectRef를 만들어내고
+ref = 참조형 데이터인 MyDate(1, 1, 2000)이다
+
+
+	public static void changeObjectAttr(MyDate ref) {
+		ref.setDay(4);
+	}
+
+changeObjectAttr를 만들어내고
+MyDate ref를 리턴하고
+ref의 day값을 4로 바꾸어라
+
+--------------------------------------------
+variables(변수)
+
+메서드 안에 인자로 있었다
+메서드 안에도 있었다
+
+크게 두종류
+메서드 밖의 variables - 인스턴스변수(instance variables),값은 초기화 할 수있다(null,0 등) 하지만 인스턴스 어떻게 없어질지 아무도 모른다,선언을 하면 자동초기화가 된다(자동으로 0, false, u0000 - 기본형타입의 데이터의 초기화값/ 참조형타입의 데이터의 초기화값은 모두 null이다)
+메서든 내부에서의 variables - 지역변수(local variables), 임시적인 변수(temporary vaiables)
+
+명시적으로 초기화를 해줘야한다.
+
+
+------------------------------------------
+https://m.blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=heartflow89&logNo=220955262405
+보고 기초 공부하기
+
