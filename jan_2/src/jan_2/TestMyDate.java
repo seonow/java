@@ -1,18 +1,22 @@
 		package jan_2;
 
 		public class TestMyDate {
+			
+			int abc;
+			int efg = abc + 10 ;
+			
 			public static void main(String[] args) {
 				MyDate m = new MyDate();
 				m.setDay(2);
 				m.setMonth(1);
 				m.setYear(2023);
 
-				int goal;
+				int goal = 5;
 				int win = goal + 10;
+				System.out.println(win);
 				
 				String dayInfo = m.getDetails();
 				System.out.println(dayInfo);
-				System.out.println(win);
 			}
 		}
 

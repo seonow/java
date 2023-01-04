@@ -1,0 +1,98 @@
+Local Variable
+-메서드의 body에서 선언
+-scope, temporary,stack(일시적이다)
+-명시적초기화 필요
+
+Instance Variable
+-자동 초기화
+-객체가 존재할때까지 유지
+
+---------------------------------------------
+연산자
+
+^ - XOR : 둘이 다를 때
+
+&& : 하나가 참이면 참값을 때리고 거짓값이면 거짓값을 때린다
+
+Right-Shift Operator >> and >>>
+128 >> 1 = 64 128/2^1
+
+String Concatenation With + (문자열 결합)
+
+---------------------------------------------
+Casting
+UpCasting
+DownCasting
+
+long value = 99L;
+int squashed = value; //wrong
+int squashed = (int) value;
+
+int squashed = 99L; //Wrong
+int squashed = (int) 99L; //OK but...
+
+--------------------------------------------
+if(<boolean_expresstion>)
+<statement_or_block>
+else if(<boolean_expresstion>)
+<statement_or_block>
+else
+<statement_or_block>
+
+예시
+if( x < 10 )
+ System.out.println("Hi")
+	or(아래 형식을 추천)
+if( x < 10 )
+ {System.out.println("Hi")
+ }
+
+-------------------------------------------
+
+switch가 할 수 있는 것은 if가 다할 수 있지만 반대는 안된다
+하지만 둘다 가능한 상황에서 switch가 if보다 빠르다
+
+상수는 대문자
+switch는 각각의 case를 break로 끝내야한다
+
+switch(carModel){
+  case DELUXE:
+	addAirConditioning();
+	addRadio();
+	addWheels();
+	assEngine();
+	break;
+  case STANDARD:
+	addRadio();
+	addWheels();
+	assEngine();
+	break;
+  dafault:
+	addWheels();
+	assEngine();
+}
+
+-------------------------------------------
+Looping Statements(반복문)
+
+for문
+for(int i = 0; i < 10 ; i++)
+  System.out.println(i + " squared is " + (i*i));
+
+	or
+
+for(int i = 0; i < 10 ; i++) {
+  System.out.println(i + " squared is " + (i*i));
+}
+
+
+while문
+int i = 0;
+while(i < 10 ){
+  System.out.println(i + " squared is " + (i*i));
+}
+
+do/while문 일단 한번 해보고 조건이 맞으면 반복하고 아니면 멈춰
+
+break : 멈춰라
+continue : 스킵해라

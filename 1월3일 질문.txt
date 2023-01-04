@@ -1,6 +1,6 @@
 public static void main(String[] args) {
 		MyDate date;
-			- //MyDate라는 클래스에 date라는 객체 생성
+			- //MyDate라는 클래스에 date라는 객체 생성 ?????
 		
 		int val;
 		val = 11;
@@ -12,7 +12,7 @@ public static void main(String[] args) {
 			- //value = 55는 없어지고 val = 11로 덮어씌워졌나? 아니면 두개의 값이 여전히 존재하는가?
 			- //이것이 pass by value 인가?
 			- //11과 55의 값이 모두 changeInt를 가르키고 있고 있지만 val과 value는 각기 다른 위치에서 changeInt를 가르키고 있다
-			
+			- //int value가 val이 되었다.
 
 
 		
@@ -27,7 +27,7 @@ public static void main(String[] args) {
 			-  	  this.day = day;
 			-  	  this.month = month;
 			-  	  this.year = year;
-			- }을 이용하여 값을 받는다.
+			- 	  } 을 이용하여 값을 받는다.
 			- date는 22,7,1964값을 가진다		
 
 	
@@ -43,7 +43,7 @@ public static void main(String[] args) {
 					ref = new MyDate(1, 1, 2000);
 					}
 			- 에서 changeObjectRef(MyDate ref)가 있는데 여기 중 MyDate ref는 무엇인가? 이렇게 작성하는 것이 어떤 의미 혹은 문법을 가지고 있나?
-			- ref는 MyDate라는 생성자를 호출해서 생성된 객체
+			- ref = new MyDate(1, 1, 2000); ref는 MyDate라는 생성자를 호출해서 생성된 객체
 
 
 		System.out.println("MyDate: " + date.getDetails()); // MyDate: 1964-7-22
