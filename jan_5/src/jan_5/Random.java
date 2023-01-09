@@ -12,7 +12,7 @@ public class Random {
 //		}
 		String[] a = new String[] {"A등급","B등급","C등급","D등급","E등급"};
 		double r = Math.ceil(Math.random() * 1000);
-		for(int i = 0 ; i < a.length; i++) {
+		for(int i = 0 ; i < a.length;i++) {
 			if(r == 1) {
 				i = 0;
 				System.out.println(a[i]);

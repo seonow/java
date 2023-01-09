@@ -1,0 +1,116 @@
+public class Employee{
+	public String name = "";
+	public double salary;
+	public Date birthDate;
+
+	public String getDetails(){...}
+}
+
+public class Manager{
+	public String name = "";
+	public double salary;
+	public Date birthDate;
+	public String department;
+
+	public String getDetails(){...}
+}
+
+
+public class Employee{
+	public String name = "";
+	public double salary;
+	public Date birthDate;
+
+	public String getDetails(){...}
+}
+
+public class Manager extends Emplyee{
+	public String department;
+}
+
+manager class는 자식클래스
+employee class는 부모클래스
+
+manager class는 상속을 받는다
+초점은 재사용이다
+
+java는 다중상속을 지원하지만 다른방식으로 지원한다.
+
+
+클래스가 하나의 클래스로 부터 상속받을 때 이를 단일상속이라 한다
+인터페이스를 통해서 다중 상속을 지원한다 문제 없이
+
+employee -> manager -> director
+director는 employee의 것도 사용할 수 있다
+
+
+
+접근제한자
+
+modifier	sameClass	samePackage	subClass	universe
+----------------------------------------------------------------------------
+private		yes
+dafault		yes		yes
+protected	yes		yes		yes
+public		yes		yes		yes		yes
+
+
+dafault는 앞에 접근제한자가 없다/ 같은 패키지 안에 있는 클래스끼리는 공유할 수 있다/ 다른 패키지의 녀석은 공유가 안된다
+protected는 다른패키지 이지만 상속관계라면 너는 허용 해줄게
+
+
+-------------------------------------------------------------
+Overriding Methods(재정의한다)
+
+
+부모가 public이면 자식은 public밖에 될 수 없다
+**자식객체를 만들려면 반드시 부모객체를 먼저 만들어야 한다**
+자식이 부모를 호출하는 키워드 super
+
+항상 생성자의 첫 라인은 super을 부른다 하지만 생략되어 있다
+
+부모의 생성자중에서 argument가 없는 생성자를 생성하거나
+자식에서 argument가 있는 생성자를 호출 하거나
+
+
+
+-------------------------------------------------------------
+Polymorphism(다형성)
+
+캡슐화
+상속
+다형성
+추상화
+
+Employee e = new Employee();	Employee e = new Manager();
+만약 다형성이 없다면 어떻게 될까?
+
+UML에서
+일반화(자식에서 부모로 가는 것)
+특수화(부모에서 자식으로 가는 것)
+
+자식타입을 부모타입으로 받겠다
+이에 대한 이점이 무엇인가?
+public void add(Product p){...}
+없으면 300개가 필요하고 있으면 1개면 된다
+p가 들어왔는데 이게 뭘 가르키는가? 태블릿? 스마트폰? 노트북?
+실제 들어온 것을 확인하는 것 instanceof - true/false
+if(p instanceof SmartPhone){...}
+
+---------------------------------------------------------------
+virtual method invocation
+
+
+내부적 이야기이다
+
+heterogeneous collection
+
+---------------------------------------------------------------
+오버로딩
+
+메소드 이름은 같은데 argument가 다른 것
+
+
+---------------------------------------------------------------
+int... nums : int가 여러개 온다
+배열을 대체한다
