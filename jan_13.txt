@@ -1,0 +1,44 @@
+Throwable	Error
+		Exception
+두개의 자식을 가지고 있다
+
+
+		- Checked Exception - Runtime계열을 제외한 나머지, 예외처리여부를 컴파일러가 처리
+	      -
+	    -
+	  -
+Exception
+	  -
+	    -
+	      -
+		- Unchecked Exception - Runtime 계열
+
+
+다른 클래스와 구분하기 위해서 통상적으로 Exception을 붙인다 
+public void doSomething() throws XException{...}
+
+public void withdraw(double amount) throws InsufficientBalanceException{
+ if(충분)
+ else(불충분){
+	throw new InsufficientBalanceException
+	}
+}
+
+try{
+   s.withdraw();
+}catch(InsufficientBalanceException e){
+   s.o.p(...)
+}
+
+
+예외처리
+try{
+   ///예외 발생가능성이 있는 코드
+}catch{
+   ///예외 발생시 처리할 코드
+}finally{
+   ///예외 발생유무와 관계없이 처리할 코드
+}
+
+
+finally는 옵션으로 써도되고 안써도 되고

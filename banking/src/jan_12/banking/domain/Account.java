@@ -1,11 +1,19 @@
 package jan_12.banking.domain;
 
 public class Account {
-	private String accountNum;
-	private double balance;
-	private Customer customer;
+	protected String accountNum;
+	protected double balance;
+	protected Customer customer;
+	
+	public Account() {
+		
+	}
 	
 	public Account(double balance) {
+		this.balance = balance;
+	}
+	public Account(String accountNum, double balance) {
+		this.accountNum = accountNum;
 		this.balance = balance;
 	}
 	//입금
