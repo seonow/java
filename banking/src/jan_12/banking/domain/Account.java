@@ -1,5 +1,7 @@
 package jan_12.banking.domain;
 
+import jan_12.banking.exception.InsufficientBalanceException;
+
 public class Account {
 	protected String accountNum;
 	protected double balance;
@@ -21,12 +23,12 @@ public class Account {
 		balance = balance + amount;
 	}
 	//출금
-	public void withdraw(double amount) {
+	public void withdraw(double amount) throws InsufficientBalanceException {
 		if(amount <= balance) {
 			this.balance -= amount;
 		}
 		else {
-			System.out.println("잔액이 부족합니다. 현재잔고는 " + balance + " 원 입니다.");
+			throw new InsufficientBalanceException("잔액이 부족합니다.");
 		}
 	}
 
