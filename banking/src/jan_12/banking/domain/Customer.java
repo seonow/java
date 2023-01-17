@@ -13,7 +13,13 @@ public class Customer {
 	private String passwd;
 	
 	private List<Account> accounts = new ArrayList<>();
-
+	
+	public Customer(String name, String ssn, String phoneNum) {
+		super();
+		this.name = name;
+		this.ssn = ssn;
+		this.phoneNum = phoneNum;
+	}
 	
 	public Customer(String name, String ssn, String phoneNum, String userId, String passwd) {
 		super();
