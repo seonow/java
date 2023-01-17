@@ -1,12 +1,19 @@
 package jan_12.banking.domain;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Collections;
+
 public class Customer {
 	private String name;
 	private String ssn;
 	private String phoneNum;
 	private String userId;
 	private String passwd;
-	private Account[] accounts = new Account[3];
+	
+	private List<Account> accounts = new ArrayList<>();
+
 	
 	public Customer(String name, String ssn, String phoneNum, String userId, String passwd) {
 		super();
@@ -17,6 +24,14 @@ public class Customer {
 		this.passwd = passwd;
 	}
 	
+	public List<Account> getAccounts() {
+		return accounts;
+	}
+
+	public void setAccounts(List<Account> accounts) {
+		this.accounts = accounts;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -50,12 +65,21 @@ public class Customer {
 
 	//고객이 가진 계좌 추가
 	public void addAccount(Account account) {
-		for(int i = 0 ; i < accounts.length ; i++) {
-			if(accounts[i] == null) {
-				accounts[i] = account;
+		boolean duplicated = false;
+		for(Account act : accounts) {
+			if(act.getAccountNum().equals(account.getAccountNum())) {
+				duplicated = true;
 				break;
 			}
 		}
+		if(!duplicated) {
+			accounts.add(account);
+		}
+//		for(int i = 0 ; i < accounts.length ; i++) {
+//			if(accounts[i] == null) {
+//				accounts[i] = account;
+//				break;
+//			}
+//		}
 	}
-	
 }

@@ -14,6 +14,7 @@ public class Account {
 	public Account(double balance) {
 		this.balance = balance;
 	}
+	
 	public Account(String accountNum, double balance) {
 		this.accountNum = accountNum;
 		this.balance = balance;
