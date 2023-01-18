@@ -68,7 +68,9 @@ public class Customer {
 	public void setPasswd(String passwd) {
 		this.passwd = passwd;
 	}
-
+	public String toString() {
+		return this.name + "\t" + this.ssn + "\t" + this.phoneNum;
+	}
 	//고객이 가진 계좌 추가
 	public void addAccount(Account account) {
 		boolean duplicated = false;

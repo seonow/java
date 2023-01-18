@@ -10,8 +10,8 @@ public class CustomerServiceImpl implements CustomerService {
 	private static final Map<String, Customer> BANK_CUSTOMERS = new HashMap<>();
 
 	@Override
-	public Customer addCustomer(String name, String ssn, String phone) {
-		Customer customer = new Customer(name, ssn, phone);
+	public Customer addCustomer(String name, String ssn, String phoneNum) {
+		Customer customer = new Customer(name, ssn, phoneNum);
 		return addCustomer(customer);
 	}
 

@@ -4,10 +4,15 @@ import jan_12.banking.exception.OverdraftException;
 
 public class CheckingAccount extends Account{
 	double overdraftProtection;
-
+	String name;
 	
 	public CheckingAccount(String accountNum, double balance, double overdraftProtection) {
 		super(accountNum, balance);
+		this.overdraftProtection = overdraftProtection;
+	}
+	public CheckingAccount(String accountNum, String name, double balance, double overdraftProtection) {
+		super(accountNum, balance);
+		this.name = name;
 		this.overdraftProtection = overdraftProtection;
 	}
 	
